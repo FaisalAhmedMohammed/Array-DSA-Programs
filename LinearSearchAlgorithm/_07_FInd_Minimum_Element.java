@@ -3,13 +3,21 @@ package LinearSearchAlgorithm;
 public class _07_FInd_Minimum_Element {
 	public static void main(String[] args) {
 
-		int[] arr = { 1, 4, 3, 5, 7, 9 };
+		int[] arr = { 6, 2, 7, 8, 4};
 
 		int min = findMin(arr);
-		System.out.println("Minimum element is: " + min);
+		if (min != -1) {
+			System.out.println("Minimum element is: " + min);
+		}
+
 	}
 
 	private static int findMin(int[] arr) {
+
+		if (arr == null || arr.length == 0) {
+			System.out.println("Array is Empty");
+			return -1;
+		}
 
 		int minElement = arr[0];
 
